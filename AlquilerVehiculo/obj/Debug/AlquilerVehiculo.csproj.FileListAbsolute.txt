@@ -252,3 +252,4 @@ C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo\bin\Microsoft.Owin.Secur
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo\obj\Debug\AlquilerVehiculo.csprojResolveAssemblyReference.cache
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo\obj\Debug\AlquilerVehiculo.dll
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo\obj\Debug\AlquilerVehiculo.pdb
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD\AlquilerVehiculo\obj\Debug\AlquilerVehiculo.csprojResolveAssemblyReference.cache
