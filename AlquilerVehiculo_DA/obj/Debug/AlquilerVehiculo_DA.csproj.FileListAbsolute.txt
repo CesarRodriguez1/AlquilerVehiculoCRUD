@@ -25,3 +25,13 @@ C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo_DA\bin\Debug\EntityFrame
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo_DA\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo_DA\obj\Debug\AlquilerVehiculo_DA.dll
 C:\Users\cesar\Source\Repositorio\New2\AlquilerVehiculo_DA\obj\Debug\AlquilerVehiculo_DA.pdb
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\AlquilerVehiculo_DA.dll.config
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\AlquilerVehiculo_DA.dll
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\AlquilerVehiculo_DA.pdb
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\EntityFramework.dll
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\EntityFramework.xml
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\obj\Debug\AlquilerVehiculo_DA.csprojResolveAssemblyReference.cache
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\obj\Debug\AlquilerVehiculo_DA.dll
+C:\Users\cesar\Source\Repos\AlquilerVehiculoCRUD2\AlquilerVehiculo_DA\obj\Debug\AlquilerVehiculo_DA.pdb
