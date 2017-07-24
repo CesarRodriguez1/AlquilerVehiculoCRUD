@@ -54,6 +54,7 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>General.tt</DependentUpon>
     </Compile>
+    <Compile Include="DACliente.cs" />
     <Compile Include="DAModelo.cs" />
     <Compile Include="DAVehiculo.cs" />
     <Compile Include="General.Context.cs">
