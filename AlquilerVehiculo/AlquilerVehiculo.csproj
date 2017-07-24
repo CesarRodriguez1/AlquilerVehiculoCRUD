@@ -195,8 +195,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\Administrador\AdministradorAreaRegistration.cs" />
-    <Compile Include="Areas\Administrador\Controllers\MainController.cs" />
     <Compile Include="Areas\MModelo\Controllers\MainController.cs" />
     <Compile Include="Areas\MModelo\MModeloAreaRegistration.cs" />
     <Compile Include="Areas\MVehiculo\Controllers\MainController.cs" />
@@ -225,10 +223,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Areas\Administrador\Views\web.config" />
-    <Content Include="Areas\Administrador\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Administrador\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Administrador\Views\Main\Index.cshtml" />
     <Content Include="Areas\MModelo\Views\web.config" />
     <Content Include="Areas\MModelo\Views\_ViewStart.cshtml" />
     <Content Include="Areas\MModelo\Views\Shared\_Layout.cshtml" />
@@ -290,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administrador\Models\" />
     <Folder Include="Areas\MModelo\Models\" />
     <Folder Include="Areas\MVehiculo\Models\" />
   </ItemGroup>
