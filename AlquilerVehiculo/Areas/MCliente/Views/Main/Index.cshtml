@@ -1,0 +1,96 @@
+﻿@using AlquilerVehiculo_DA;
+@{
+    ViewBag.Title = "Index";
+    List<Cliente> cliente = (List<Cliente>)ViewBag.ListadoCliente;
+}
+<h2></h2>
+<h2>Listado de Clientes </h2>
+<br />
+@Html.ActionLink(
+    "Agregar nuevo modelo",
+                "Registro",
+                   "Main",
+                   new { area = "MCliente" }, new { @class = "btn btn-success" })
+
+<br />
+<br />
+<table id="tbIDCliente">
+    <thead>
+        <tr>
+            <th> </th>
+            <th>
+                CODIGO CLIENTE
+            </th>
+            <th>
+                APELLIDO PATERNO
+            </th>
+            <th>
+                APELLIDO MATERNO
+            </th>
+            <th>
+                NOMBRES
+            </th>
+            <th>
+                FECHA NACIMIENTO
+            </th>
+            <th>
+                EDAD
+            </th>
+            <th>
+                CALLE
+            </th>
+            <th>
+                PAIS
+            </th>
+            <th>
+               DEPARTAMENTO
+            </th>
+            <th>
+                PROVINCIA
+            </th>
+            <th>
+               DISTRITO
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cliente item in cliente)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                   "Editar",
+                   "Editar",
+                   "Main",
+                   new { area = "MCliente", ID = item.CodCliente }, null)
+                </td>
+                <td>@item.CodCliente</td>
+                <td>@item.ApePaterno</td>
+                <td>@item.ApeMaterno</td>
+                <td>@item.Nombres</td>
+                <td>@item.FechaNacimiento</td>
+                <td>@item.Edad</td>
+                <td>@item.Calle</td>
+                <td>@item.Pais</td>
+                <td>@item.Departamento</td>
+                <td>@item.Provincia</td>
+                <td>@item.Distrito</td>
+                <td>
+                    @Html.ActionLink(
+                   "Eliminar",
+                   "Eliminar",
+                   "Main",
+                   new { area = "MModelo", ID = item.CodCliente }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $('#tbIDCliente').DataTable();
+</script>
+ 
+

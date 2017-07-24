@@ -1,0 +1,64 @@
+﻿@using AlquilerVehiculo_DA;
+@{
+    ViewBag.Title = "Index";
+    List<Marca> marca = (List<Marca>)ViewBag.ListadoMarca;
+}
+
+<h2>Listado de Marcas</h2>
+@Html.ActionLink(
+    "Agregar nuevo modelo",
+                "Registro",
+                   "Main",
+                   new { area = "MMarca" }, new { @class = "btn btn-success" })
+
+<br />
+<br />
+<table id="tbIDCliente">
+    <thead>
+        <tr>
+            <th> </th>
+            <th>
+                CODIGO MARCA
+            </th>
+            <th>
+                DESCRIPCION
+            </th>
+            <th>
+                PAIS
+            </th>
+            
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Marca item in marca)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                   "Editar",
+                   "Editar",
+                   "Main",
+                   new { area = "MMarca", ID = item.CodMarca }, null)
+                </td>
+                <td>@item.CodMarca</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Pais</td>
+                <td>
+                    @Html.ActionLink(
+                   "Eliminar",
+                   "Eliminar",
+                   "Main",
+                   new { area = "MMarca", ID = item.CodMarca }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $('#tbIDCliente').DataTable();
+</script>
+
+

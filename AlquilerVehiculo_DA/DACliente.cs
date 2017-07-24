@@ -8,16 +8,15 @@ namespace AlquilerVehiculo_DA
 {
     public class DACliente
     {
-        static public List<Cliente> Listado()
+        static public List<Cliente> ListadoCliente()
         {
             List<Cliente> cliente = new List<Cliente>();
             using (var data = new BDAlquilerVehiculoEntities())
             {
-                cliente = data.Cliente.ToList();
+                return data.Cliente.ToList();
             }
-            return cliente;
         }
-        static public bool Registrarcliente(Cliente cliente)
+        static public bool RegistrarCliente(Cliente cliente)
         {
             bool exito = true;
 

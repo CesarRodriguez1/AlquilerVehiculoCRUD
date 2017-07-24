@@ -195,6 +195,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\MCliente\Controllers\MainController.cs" />
+    <Compile Include="Areas\MCliente\MClienteAreaRegistration.cs" />
+    <Compile Include="Areas\MMarca\Controllers\MainController.cs" />
+    <Compile Include="Areas\MMarca\MMarcaAreaRegistration.cs" />
     <Compile Include="Areas\MModelo\Controllers\MainController.cs" />
     <Compile Include="Areas\MModelo\MModeloAreaRegistration.cs" />
     <Compile Include="Areas\MVehiculo\Controllers\MainController.cs" />
@@ -235,6 +239,20 @@
     <Content Include="Areas\MVehiculo\Views\MAin\Index.cshtml" />
     <Content Include="Areas\MVehiculo\Views\MAin\Registro.cshtml" />
     <Content Include="Areas\MVehiculo\Views\MAin\Editar.cshtml" />
+    <Content Include="Areas\MCliente\Views\web.config" />
+    <Content Include="Areas\MCliente\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\MCliente\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\MCliente\Views\Main\Index.cshtml" />
+    <Content Include="Areas\MCliente\Views\Main\Registro.cshtml" />
+    <Content Include="Areas\MCliente\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\MCliente\Views\Main\Eliminar.cshtml" />
+    <Content Include="Areas\MMarca\Views\web.config" />
+    <Content Include="Areas\MMarca\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\MMarca\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\MMarca\Views\Main\Index.cshtml" />
+    <Content Include="Areas\MMarca\Views\Main\Registro.cshtml" />
+    <Content Include="Areas\MMarca\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\MMarca\Views\Main\Eliminar.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -284,6 +302,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\MCliente\Models\" />
+    <Folder Include="Areas\MMarca\Models\" />
     <Folder Include="Areas\MModelo\Models\" />
     <Folder Include="Areas\MVehiculo\Models\" />
   </ItemGroup>
@@ -315,7 +335,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>6777</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
