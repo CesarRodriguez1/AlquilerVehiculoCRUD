@@ -195,12 +195,16 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Areas\MCliente\Controllers\MainController.cs" />
     <Compile Include="Areas\MCliente\MClienteAreaRegistration.cs" />
     <Compile Include="Areas\MMarca\Controllers\MainController.cs" />
     <Compile Include="Areas\MMarca\MMarcaAreaRegistration.cs" />
     <Compile Include="Areas\MModelo\Controllers\MainController.cs" />
     <Compile Include="Areas\MModelo\MModeloAreaRegistration.cs" />
+    <Compile Include="Areas\MReserva\Controllers\MainController.cs" />
+    <Compile Include="Areas\MReserva\MReservaAreaRegistration.cs" />
     <Compile Include="Areas\MVehiculo\Controllers\MainController.cs" />
     <Compile Include="Areas\MVehiculo\MVehiculoAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -253,6 +257,17 @@
     <Content Include="Areas\MMarca\Views\Main\Registro.cshtml" />
     <Content Include="Areas\MMarca\Views\Main\Editar.cshtml" />
     <Content Include="Areas\MMarca\Views\Main\Eliminar.cshtml" />
+    <Content Include="Areas\MReserva\Views\web.config" />
+    <Content Include="Areas\MReserva\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\MReserva\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\MReserva\Views\Main\Index.cshtml" />
+    <Content Include="Areas\MReserva\Views\Main\Registro.cshtml" />
+    <Content Include="Areas\MReserva\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Main\Creditos.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -302,9 +317,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\MCliente\Models\" />
     <Folder Include="Areas\MMarca\Models\" />
     <Folder Include="Areas\MModelo\Models\" />
+    <Folder Include="Areas\MReserva\Models\" />
     <Folder Include="Areas\MVehiculo\Models\" />
   </ItemGroup>
   <ItemGroup>

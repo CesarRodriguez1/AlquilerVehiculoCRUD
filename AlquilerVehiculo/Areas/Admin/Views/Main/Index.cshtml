@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <title>Bootstrap Theme Company Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <script src="/lib/jquery-1.12.2.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <style>
+        .jumbotron {
+            background-color: #f4511e;
+            color: #fff;
+            padding: 100px 25px;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>ALQUILER VEHICULO</h1>
+        <p>Perfil del administrador</p>
+
+
+
+    </div>
+    <!-- Container (Services Section) -->
+    <div class="container-fluid text-center">
+        <h2>SERVICIOS DE MANTENIMIENTO</h2>
+        <h4>(Listado, Registro, Edición, Eliminación)</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-th-list logo-small"></span>
+                <h4>RESERVA</h4>
+                @Html.ActionLink("MANTENIMIENTO", "Index", "Main", new { area = "MReserva" }, new { @class = "btn btn-danger" })
+
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>CLIENTE</h4>
+                @Html.ActionLink("MANTENIMIENTO", "Index", "Main", new { area = "MCliente" }, new { @class = "btn btn-danger" })
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-road logo-small"></span>
+                <h4>VEHICULO</h4>
+                @Html.ActionLink("MANTENIMIENTO", "Index", "Main", new { area = "MVehiculo" }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-cog logo-small"></span>
+                <h4>MODELO</h4>
+                @Html.ActionLink("MANTENIMIENTO", "Index", "Main", new { area = "MModelo" }, new { @class = "btn btn-danger" })
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-asterisk logo-small"></span>
+                <h4>MARCA</h4>
+                @Html.ActionLink("MANTENIMIENTO", "Index", "Main", new { area = "MMarca" }, new { @class = "btn btn-danger" })
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+                <h4>CREDITOS</h4>
+                @Html.ActionLink("PARTICIPANTES", "Creditos", "Main", new { area = "Admin" }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+
+</body>

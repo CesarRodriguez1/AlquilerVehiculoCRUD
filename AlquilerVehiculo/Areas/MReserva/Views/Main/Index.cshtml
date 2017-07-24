@@ -1,0 +1,107 @@
+﻿@using AlquilerVehiculo_DA;
+
+@{
+    ViewBag.Title = "Index";
+
+    List<Reserva> reserva = (List<Reserva>)ViewBag.ListadoReserva;
+    List<Vehiculo> vehiculo = (List<Vehiculo>)ViewBag.ListadoVehiculo;
+    List<Cliente> cliente = (List<Cliente>)ViewBag.ListadoCliente;
+
+
+}
+<h2></h2>
+<h2>Listado de Reservas </h2>
+<br />
+@Html.ActionLink(
+    "Agregar nuevo Vehiculo",
+                "Registro",
+                   "Main",
+                   new { area = "MReserva" }, new { @class = "btn btn-success" })
+
+<br />
+<br />
+
+<table id="tbIDreserva">
+    <thead>
+        <tr>
+            <th> </th>
+            <th>
+                COD RESERVA
+            </th>
+            <th>
+                COD VEHICULO
+            </th>
+            <th>
+                VEHICULO
+            </th>
+            <th>
+                COD CLIENTE
+            </th>
+            <th>
+                CLIENTE
+            </th>
+            <th>
+                FECHA RESERVA
+            </th>
+            <th>
+                PRECIO
+            </th>
+            <th>
+                NRO DIAS
+            </th>
+            <th>
+                NRO DIAS RETRASO
+            </th>
+
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Reserva item in reserva)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                   "Editar",
+                   "Editar",
+                   "Main",
+                   new { area = "MReserva", ID = item.CodReserva }, null)
+                </td>
+                <td>@item.CodReserva</td>
+
+                <td>@item.CodVehiculo</td>
+                <td>
+                    @foreach (Vehiculo item2 in vehiculo.Where(x => x.CodVehiculo == item.CodVehiculo).ToList())
+                {
+                        <label>  @item2.Descripcion</label>
+                    }
+                </td>
+
+                <td>@item.CodCliente</td>
+                <td>
+                    @foreach (Cliente item3 in cliente.Where(x => x.CodCliente == item.CodCliente).ToList())
+                {
+                        <label>  @item3.ApePaterno, @item3.Nombres</label>
+                    }
+                </td>
+                <td>@item.FechaReserva</td>
+                <td>@item.Precio</td>
+                <td>@item.NroDias</td>
+                <td>@item.NroRetraso</td>
+
+                <td>
+                    @Html.ActionLink(
+                   "Eliminar",
+                   "Eliminar",
+                   "Main",
+                   new { area = "MReserva", ID = item.CodReserva }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $('#tbIDreserva').DataTable();
+</script>

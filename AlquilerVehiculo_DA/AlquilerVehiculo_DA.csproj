@@ -57,6 +57,7 @@
     <Compile Include="DACliente.cs" />
     <Compile Include="DAMarca.cs" />
     <Compile Include="DAModelo.cs" />
+    <Compile Include="DAReserva.cs" />
     <Compile Include="DAVehiculo.cs" />
     <Compile Include="General.Context.cs">
       <AutoGen>True</AutoGen>
