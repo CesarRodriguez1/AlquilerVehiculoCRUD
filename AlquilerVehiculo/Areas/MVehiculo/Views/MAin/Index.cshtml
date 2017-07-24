@@ -1,0 +1,87 @@
+﻿@using AlquilerVehiculo_DA;
+
+@{
+    ViewBag.Title = "Index";
+
+    List<Vehiculo> vehiculo = (List<Vehiculo>)ViewBag.ListadoVehiculo;
+    List<Modelo> modelo = (List<Modelo>)ViewBag.ListadoModelo;
+
+
+}
+<h2></h2>
+<h2>Listado de Modelos </h2>
+<br />
+@Html.ActionLink(
+    "Agregar nuevo Vehiculo",
+                "Registro",
+                   "Main",
+                   new { area = "MVehiculo" }, new { @class = "btn btn-success" })
+
+<br />
+<br />
+
+<table id="tbIDvehiculo">
+    <thead>
+        <tr>
+            <th> </th>
+            <th>
+                COD VEHICULO
+            </th>
+            <th>
+                DESCRIPCION
+            </th>
+            <th>
+                PLACA
+            </th>
+            <th>
+                COLOR
+            </th>
+            <th>
+                MODELO
+            </th>
+            <th>
+                DISPONIBILIDAD
+            </th>
+
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Vehiculo item in vehiculo)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                   "Editar",
+                   "Editar",
+                   "Main",
+                   new { area = "MVehiculo", ID = item.CodVehiculo }, null)
+                </td>
+                <td>@item.CodVehiculo</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Placa</td>
+                <td>@item.Color</td>
+                <td>
+                    @foreach (Modelo item2 in modelo.Where(x => x.CodModelo == item.CodModelo).ToList())
+                {
+                        <label>  @item2.Descripcion</label>
+                    }
+                </td>
+                <td>@item.Disponible</td>
+
+                <td>
+                    @Html.ActionLink(
+                   "Eliminar",
+                   "Eliminar",
+                   "Main",
+                   new { area = "MVehiculo", ID = item.CodVehiculo }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $('#tbIDvehiculo').DataTable();
+</script>

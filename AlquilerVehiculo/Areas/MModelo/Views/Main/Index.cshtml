@@ -1,0 +1,83 @@
+﻿@using AlquilerVehiculo_DA;
+
+@{
+    ViewBag.Title = "Index";
+
+
+    List<Modelo> modelo = (List<Modelo>)ViewBag.ListadoModelo;
+    List<Marca> marca = (List<Marca>)ViewBag.ListadoMarca;
+
+}
+<h2></h2>
+<h2>Listado de Modelos </h2>
+<br />
+@Html.ActionLink(
+    "Agregar nuevo modelo",
+                "Registro",
+                   "Main",
+                   new { area = "MModelo" }, new { @class = "btn btn-success" })
+
+<br />
+<br />
+
+<table id="tbIDmodelo">
+    <thead>
+        <tr>
+            <th> </th>
+            <th>
+                COD MODELO
+            </th>
+            <th>
+                DESCRIPCION
+            </th>
+            <th>
+                PUERTAS
+            </th>
+            <th>
+                PRECIO
+            </th>
+            <th>
+                MARCA
+            </th>
+
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Modelo item in modelo)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                   "Editar",
+                   "Editar",
+                   "Main",
+                   new { area = "MModelo", ID = item.CodModelo }, null)
+                </td>
+                <td>@item.CodModelo</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Puertas</td>
+                <td>@item.Precio</td>
+                <td>
+                    @foreach (Marca item2 in marca.Where(x => x.CodMarca == item.CodMarca).ToList())
+                {
+                        <label>  @item2.Descripcion</label>
+                    }
+                </td>
+
+                <td>
+                    @Html.ActionLink(
+                   "Eliminar",
+                   "Eliminar",
+                   "Main",
+                   new { area = "MModelo", ID = item.CodModelo }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $('#tbIDmodelo').DataTable();
+</script>

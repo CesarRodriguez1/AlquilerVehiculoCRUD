@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<br />
+<div id="divListadoVehiculo">
+
+
+</div>
+
+
+<script>
+    ListadoVehiculo();
+
+    function ListadoVehiculo() {
+
+        $.ajax({
+            url: "/Administrador/Main/Listado",
+            cache: false,
+            success: function (html) {
+                $("#divListadoVehiculo").html(html);
+            }
+        });
+
+    }
+
+
+
+</script>
